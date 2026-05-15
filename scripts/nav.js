@@ -438,15 +438,15 @@ let blackblock = document.querySelector('[data-block]')
 createCards("all");
 blackblock.style.left = `${allbuttons[0].getBoundingClientRect().left}px`;
 allbuttons[0].classList.add('active')
-allbuttons.forEach((button) => {
-  button.addEventListener('click', (e) => {
-    createCards(button.dataset.button);
+allbuttons.forEach((buttoncard) => {
+  buttoncard.addEventListener('click', (e) => {
+    createCards(buttoncard.dataset.button);
     console.log(e)
-    blackblock.style.left = `${button.getBoundingClientRect().left}px`;
-    allbuttons.forEach((button) => {
-      button.classList.remove('active')
+    blackblock.style.left = `${buttoncard.getBoundingClientRect().left}px`;
+    allbuttons.forEach((buttoncard) => {
+      buttoncard.classList.remove('active')
     })
-    button.classList.add('active')
+    buttoncard.classList.add('active')
   })
 })
 function createCards(category) {
