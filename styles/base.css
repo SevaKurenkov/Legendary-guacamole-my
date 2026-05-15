@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -6,6 +6,7 @@
   interpolate-size: allow-keywords;
   --nav-height: 104px;
 }
+
 p,
 h1,
 h2,
@@ -17,6 +18,7 @@ a,
 span {
   font-family: "Open Sans", sans-serif;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -30,6 +32,7 @@ nav {
   background: #121213;
   z-index: 1002;
 }
+
 .nav-wrapper {
   display: flex;
   flex-direction: row;
@@ -38,13 +41,16 @@ nav {
   width: 100%;
   max-width: 1140px;
 }
+
 .nav-left {
   display: flex;
   flex-direction: row;
   gap: 32px;
 }
+
 .nav-menu {
   display: flex;
+
   div {
     display: flex;
     align-items: center;
@@ -54,11 +60,13 @@ nav {
     border-radius: 100px;
     cursor: pointer;
     color: #fff;
+
     &:hover {
       background: #2b2b2c;
     }
   }
 }
+
 .cta-button {
   display: flex;
   align-items: center;
@@ -69,6 +77,7 @@ nav {
   padding: 0 16px;
   border-radius: 8px;
 }
+
 .dropdown {
   z-index: 1001;
   display: flex;
@@ -84,54 +93,64 @@ nav {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease-in-out;
+
   &:is(.active) {
     opacity: 1;
     pointer-events: auto;
     height: fit-content;
   }
 }
+
 .dropdown-wrapper {
   display: flex;
   gap: 32px;
   max-width: 1140px;
   width: 100%;
   height: fit-content;
+
   .titles {
     display: flex;
     flex-direction: column;
     gap: 12px;
     border-right: 1px solid #ffffff80;
     width: 228px;
+
     a {
       text-decoration: none;
       color: #ffffff80;
       font-size: 16px;
       transition: all 0.1s ease-in-out;
       transform-origin: left;
+
       &:hover {
         color: #fff;
         transform: scale(1.15);
       }
     }
   }
+
   .content {
     display: flex;
     width: 100%;
   }
 }
+
 .subsection {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 100%;
+
   a {
     color: #ffffff;
     text-decoration: none;
+
     &:first-child {
       color: #ffffff80;
     }
   }
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -143,11 +162,13 @@ nav {
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
-  &:is(.active){
+
+  &:is(.active) {
     opacity: 1;
     pointer-events: auto;
   }
 }
+
 .hero-section {
   display: grid;
   gap: 12px;
@@ -156,36 +177,41 @@ nav {
   grid-template-rows: repeat(6, 1fr);
   padding: 24px;
   padding-top: var(--nav-height);
-  grid-template-areas: 
-  "main main main main sidebar"
-  "main main main main sidebar"
-  "main main main main sidebar"
-  "main main main main sidebar"
-  "left left right right sidebar"
-  "left left right right sidebar";
-  width: 100%;  
+  grid-template-areas:
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "main main main main sidebar"
+    "left left right right sidebar"
+    "left left right right sidebar";
+  width: 100%;
   background: #121213;
+
   div {
     background: #fff;
     width: 100%;
     height: 100%;
     border-radius: 36px;
-    &:nth-child(1){
+
+    &:nth-child(1) {
       grid-area: main;
     }
-    &:nth-child(2){
+
+    &:nth-child(2) {
       grid-area: sidebar;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       grid-area: left;
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
       grid-area: right;
     }
   }
 }
 
-.futer{
+.futer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,7 +219,7 @@ nav {
   gap: 10px;
 }
 
-.Chosebest{
+.Chosebest {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -201,7 +227,7 @@ nav {
   height: fit-content;
 }
 
-.buttons{
+.buttons {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -212,7 +238,9 @@ nav {
   gap: 10px;
 }
 
-.buttonAll,.buttonSmalbiznes,.buttonbigbiznes{
+.buttonAll,
+.buttonSmalbiznes,
+.buttonbigbiznes {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,13 +250,14 @@ nav {
   z-index: 2;
 }
 
-.TaskBlock{
+.TaskBlock {
   width: 100%;
   height: 100%;
   background-color: darkgrey;
   border-radius: 24px;
 }
-.blocks{
+
+.blocks {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -237,7 +266,7 @@ nav {
   height: 70vh;
 }
 
-.blackBlock{
+.blackBlock {
   position: absolute;
   width: 100px;
   height: 50px;
@@ -247,7 +276,7 @@ nav {
   border-radius: 24px;
 }
 
-.active{
+.active {
   color: #fff;
 }
 
@@ -255,7 +284,7 @@ nav {
 
 
 
-.cashbackblock{
+.cashbackblock {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -263,7 +292,7 @@ nav {
   align-items: center;
 }
 
-.cashback{
+.cashback {
   display: flex;
   align-items: center;
   width: 100%;
@@ -271,7 +300,7 @@ nav {
   background-color: #FFCAC7;
 }
 
-.cashbacktext{
+.cashbacktext {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -279,56 +308,72 @@ nav {
   height: fit-content;
 }
 
-.cashbackgif{
+.cashbackgif {
   height: 528px;
   width: 528px;
 }
 
-.TextBig,.TextSmall,.Button{
+.TextBig,
+.TextSmall,
+.Button {
   width: fit-content;
   height: fit-content;
 }
 
 
 
-.servisesblock{
+.servisesblock {}
 
-}
-
-.servises{
-
-}
+.servises {}
 
 .gridservises {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(4, 1fr); 
-  height: 100vh; 
-  gap: 20px; 
-  grid-template-areas: 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vh;
+  gap: 20px;
+  grid-template-areas:
     "a1 a2"
     "a1 a3"
     "a1 a4"
     "a5 a6";
-  width: 100%;  
+  width: 100%;
   background: #fff;
-  > div {
+
+  >div {
     background: #8a8a8a;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
     width: 100%;
     height: 100%;
     border-radius: 36px;
     box-sizing: border-box;
 
-    &:nth-child(1){ grid-area: a1; }
-    &:nth-child(2){ grid-area: a2; }
-    &:nth-child(3){ grid-area: a3; }
-    &:nth-child(4){ grid-area: a4; }
-    &:nth-child(5){ grid-area: a5; }
-    &:nth-child(6){ grid-area: a6; }
+    &:nth-child(1) {
+      grid-area: a1;
+    }
+
+    &:nth-child(2) {
+      grid-area: a2;
+    }
+
+    &:nth-child(3) {
+      grid-area: a3;
+    }
+
+    &:nth-child(4) {
+      grid-area: a4;
+    }
+
+    &:nth-child(5) {
+      grid-area: a5;
+    }
+
+    &:nth-child(6) {
+      grid-area: a6;
+    }
   }
 
-  > div:not(:first-child):hover {
+  >div:not(:first-child):hover {
     transform: scale(1.05);
   }
 }
@@ -344,9 +389,9 @@ nav {
 /* Ставим заголовок и кнопку на одну линию */
 .cursifirst {
   display: flex;
-  justify-content: space-between; 
-  align-items: center;            
-  width: 100%;         
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .cursifirst p {
@@ -363,8 +408,8 @@ nav {
 
 /* Новая уникальная кнопка */
 .dropdown-btn-curses {
-  background: #1a1a1a; 
-  color: #ffffff;       
+  background: #1a1a1a;
+  color: #ffffff;
   border: none;
   border-radius: 20px;
   padding: 8px 16px;
@@ -378,7 +423,7 @@ nav {
 .dropdown-list-curses {
   position: absolute;
   top: 100%;
-  right: 0; 
+  right: 0;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -387,7 +432,7 @@ nav {
   list-style: none;
   min-width: 130px;
   display: none;
-  z-index: 99; 
+  z-index: 99;
 }
 
 /* Отображение списка при открытии */
@@ -420,17 +465,21 @@ nav {
 /* Контейнер таблицы на CSS Grid из 3 колонок */
 .currency-table {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* Первая колонка шире для названия */
-  row-gap: 20px;                      /* Отступы между строками */
+  grid-template-columns: 2fr 1fr 1fr;
+  /* Первая колонка шире для названия */
+  row-gap: 20px;
+  /* Отступы между строками */
   column-gap: 10px;
-  margin-top: 24px;                   /* Отступ сверху от заголовка карточки */
+  margin-top: 24px;
+  /* Отступ сверху от заголовка карточки */
   font-family: sans-serif;
 }
 
 /* Шапка таблицы */
 .table-header {
   font-size: 14px;
-  color: #fff; /* Серый цвет текста */
+  color: #fff;
+  /* Серый цвет текста */
   padding-bottom: 8px;
 }
 
@@ -474,5 +523,22 @@ nav {
   color: #000000;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Центрирование чисел по вертикали */
+  justify-content: flex-end;
+  /* Центрирование чисел по вертикали */
+}
+
+@media (max-width: 1000px) {
+  .gridservises {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "a1"
+      "a1"
+      "a1"
+      "a2"
+      "a3"
+      "a4"
+      "a5"
+      "a6";
+  }
 }
