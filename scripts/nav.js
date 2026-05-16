@@ -465,34 +465,25 @@ function createCards(category) {
 }
 
 {
- const boxCurses = document.querySelector('.dropdown-curses');
+const boxCurses = document.querySelector('.dropdown-curses');
 const btnCurses = document.getElementById('dbBtn');
 const itemsCurses = document.querySelectorAll('.dropdown-item-curses');
-// Находим все ячейки с цифрами курсов
 const priceElements = document.querySelectorAll('.currency-value');
 
-// Открытие/закрытие меню
 btnCurses.addEventListener('click', (e) => {
   e.stopPropagation(); 
   boxCurses.classList.toggle('open');
 });
 
-// Логика выбора элемента
 itemsCurses.forEach(item => {
   item.addEventListener('click', (e) => {
     e.stopPropagation();
-    
     const oldSel = boxCurses.querySelector('.dropdown-item-curses.selected');
     if (oldSel) oldSel.classList.remove('selected');
-
     item.classList.add('selected');
     btnCurses.textContent = item.textContent; 
     boxCurses.classList.remove('open');
-
-    // Получаем выбранный режим: 'cash' или 'online'
     const mode = item.getAttribute('data-value');
-    
-    // МЕНЯЕМ ЦЕНЫ: Перебираем каждую ячейку и подставляем нужную цену
     priceElements.forEach(el => {
       if (mode === 'online') {
         el.textContent = el.getAttribute('data-online');
@@ -502,7 +493,5 @@ itemsCurses.forEach(item => {
     });
   });
 });
-
-// Закрытие при клике мимо меню
 document.addEventListener('click', () => boxCurses.classList.remove('open'));
 }
